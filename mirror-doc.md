@@ -13,3 +13,5 @@ To create a castor mirror of your repository `your-organization/your-repo`
 ```
 This file will be use to periodically update your mirror with commit pushed on `your-organization/your-repo`.
 
+Note that if the mirror is not hosted on `castor-software`, it won't be updated if `castor-software` does not have the write access on the mirror.
+
