@@ -1,6 +1,6 @@
 [
-  {"src-repository": "INRIA/spoon", "mirrors":["castor-software/spoon-mirror"]},
-  {"src-repository": "castor-software/yajta", "mirrors":["diverse-project/yajta-mirror"]},
-  {"src-repository": "unison-code/unison", "mirrors":["castor-software/unison-mirror"]},
-  {"src-repository": "Gecode/gecode", "mirrors":["castor-software/gecode-mirror"]}
+  {"src": "INRIA/spoon", "mirrors":["castor-software/spoon-mirror"]},
+  {"src": "castor-software/yajta", "mirrors":["diverse-project/yajta-mirror"]},
+  {"src": "unison-code/unison", "mirrors":["castor-software/unison-mirror"]},
+  {"src": "Gecode/gecode", "mirrors":["castor-software/gecode-mirror"]}
 ]
