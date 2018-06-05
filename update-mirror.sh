@@ -7,10 +7,21 @@
 #			for all mirror
 #				git push
 #requires: jq, git
+scriptPath=$0
+oldWorkingDir=`pwd`
+workingDir="."
 
-MIRRORS_LIST="/home/nharrand/Documents/docs/mirror-list.json"
-ABSOLUTE_PATH_OF_LOCAL_REPOS="/home/nharrand/Documents/docs"
-LOG_FILE="/home/nharrand/Documents/docs/logs"
+if [[ "$scriptPath" == *"/"* ]]; then
+    scriptName=`echo $scriptPath | rev | cut -d '/' -f1 | rev`
+	workingDir=`echo $scriptPath | sed "s/$scriptName//g"`
+	
+fi
+
+cd $workingDir
+
+MIRRORS_LIST="mirror-list.json"
+ABSOLUTE_PATH_OF_LOCAL_REPOS=`pwd`
+LOG_FILE="logs"
 
 
 cd $ABSOLUTE_PATH_OF_LOCAL_REPOS
@@ -56,3 +67,4 @@ do
 		git push $remote_u master >> $LOG_FILE 2>&1
 	done
 done
+cd $oldWorkingDir
