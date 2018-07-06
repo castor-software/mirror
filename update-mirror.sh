@@ -43,7 +43,7 @@ do
 	#If local copy does not exists
 	if [ ! -d "$r" ]; then
 		echo "$ABSOLUTE_PATH_OF_LOCAL_REPOS/$r does not exist."
-		git clone git@github.com:$u/$r.git 2>&1
+		git clone ssh://github.com/$u/$r.git 2>&1
 	fi
 	cd $r
 
@@ -60,7 +60,7 @@ do
 		git remote get-url $remote_u 2>&1
 		if [ $? -ne 0 ]; then
 			echo "Mirror $remote_u not registered yet"
-			git remote add $remote_u git@github.com:$remote_u/$remote_r.git 2>&1
+			git remote add $remote_u ssh://github.com/$remote_u/$remote_r.git 2>&1
 		fi
 
 		#push to mirror
