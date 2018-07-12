@@ -10,6 +10,7 @@
 scriptPath=$0
 oldWorkingDir=`pwd`
 workingDir="."
+gitPrefix="git@github.com:"
 
 if [[ "$scriptPath" == *"/"* ]]; then
     scriptName=`echo $scriptPath | rev | cut -d '/' -f1 | rev`
@@ -43,7 +44,7 @@ do
 	#If local copy does not exists
 	if [ ! -d "$r" ]; then
 		echo "$ABSOLUTE_PATH_OF_LOCAL_REPOS/$r does not exist."
-		git clone ssh://github.com/$u/$r.git 2>&1
+		git clone $gitPrefix$u/$r.git 2>&1
 	fi
 	cd $r
 
@@ -60,7 +61,7 @@ do
 		git remote get-url $remote_u 2>&1
 		if [ $? -ne 0 ]; then
 			echo "Mirror $remote_u not registered yet"
-			git remote add $remote_u ssh://github.com/$remote_u/$remote_r.git 2>&1
+			git remote add $remote_u $gitPrefix$remote_u/$remote_r.git 2>&1
 		fi
 
 		#push to mirror
