@@ -2,5 +2,6 @@
   {"src": "INRIA/spoon", "mirrors":["castor-software/spoon-mirror"]},
   {"src": "castor-software/yajta", "mirrors":["diverse-project/yajta-mirror"]},
   {"src": "unison-code/unison", "mirrors":["castor-software/unison-mirror"]},
-  {"src": "Gecode/gecode", "mirrors":["castor-software/gecode-mirror"]}
+  {"src": "Gecode/gecode", "mirrors":["castor-software/gecode-mirror"]},
+  {"src": "david-broman/modelyze", "mirrors":["castor-software/modelyze-mirror"]}
 ]
