@@ -6,5 +6,6 @@
   {"src": "david-broman/modelyze", "mirrors":["castor-software/modelyze-mirror"]},
   {"src": "verificatum/verificatum-vmn", "mirrors": ["castor-software/verificatum-vmn-mirror"]},
   {"src": "verificatum/verificatum-vjsc", "mirrors": ["castor-software/verificatum-vjsc-mirror"]},
+  {"src": "eclipse/repairnator", "mirrors": ["castor-software/repairnator-mirror"]},
   {"src": "kth-step/HolBA", "mirrors": ["castor-software/HolBA-mirror"]}
 ]
